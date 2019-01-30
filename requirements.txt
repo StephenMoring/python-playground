@@ -4,3 +4,4 @@ flask_bcrypt
 flask_login
 Pillow
 flask_wtf
+psycopg2
