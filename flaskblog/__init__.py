@@ -6,11 +6,12 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ae6a4226b227180a2b7164082cf21320'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://stephenm:fnghulty1!@playgorunddb.cid6kypatran.us-east-1.rds.amazonaws.com'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://stephenm:fnghulty1!@playground-instance.cid6kypatran.us-east-1.rds.amazonaws.com:5432/playgrounddb'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 login_manager.login_message_category = 'info'
 
-from flaskblog import routes
+from flaskblog import routes 
